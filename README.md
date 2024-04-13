@@ -9,10 +9,10 @@ Effects: cherry (Pacman powerup, allows to hunt ghosts), coins (score), teleport
 In config.utf8 file you can configurate the map (Easy, Medium, Hard) and the length of powerups.
 
 You can also create a custom map following these rules:
-    1. Top and bottom are all walls, sides can be either walls or teleports
-    2. Teleports can only be placed on the side borders. They must all be paired up - one on each side of the border in line. They can't be blocked by walls.
-    3. Cherries are marked as 'g', coins as '.', pacman as 'O'.
-    4. Ghosts are maked '1' for 'Chaser', '2' for 'Zombie' and '3' for 'Dumb'.
+* 1. Top and bottom are all walls, sides can be either walls or teleports
+* 2. Teleports can only be placed on the side borders. They must all be paired up - one on each side of the border in line. They can't be blocked by walls.
+* 3. Cherries are marked as 'g', coins as '.', pacman as 'O'.
+* 4. Ghosts are maked '1' for 'Chaser', '2' for 'Zombie' and '3' for 'Dumb'.
 
 If the map is not valid, the application will end.
 
