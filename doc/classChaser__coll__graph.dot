@@ -1,0 +1,18 @@
+digraph "Chaser"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Chaser\n||+ Chaser()\l+ clone()\l+ respawn()\l+ findPath()\l+ moveTarget()\l+ move()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="The Chaser class represents a type of ghost that chases the Pacman."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{Ghost\n||+ Ghost()\l+ ~Ghost()\l+ checkPac()\l+ clone()\l+ move()\l+ respawn()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGhost.html",tooltip="The Ghost class represents a ghost in the game."];
+  Node3 -> Node2 [color="grey25",fontsize="10",style="solid",label=" #coords\n#spawn" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 [label="{Coord\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structCoord.html",tooltip="The Coord struct represents a coordinate in 2D space."];
+  Node4 -> Node3 [color="grey25",fontsize="10",style="solid",label=" +x\n+y" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node4 [label="{int\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -targetRun" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node5 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -lastState" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node5 [label="{bool\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -path" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node6 [label="{map\< Coord, Coord \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

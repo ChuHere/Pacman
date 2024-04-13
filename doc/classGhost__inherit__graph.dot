@@ -1,0 +1,13 @@
+digraph "Ghost"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Ghost\n|# coords\l# spawn\l|+ Ghost()\l+ ~Ghost()\l+ checkPac()\l+ clone()\l+ move()\l+ respawn()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="The Ghost class represents a ghost in the game."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{Chaser\n|- targetRun\l- lastState\l- path\l|+ Chaser()\l+ clone()\l+ respawn()\l+ findPath()\l+ moveTarget()\l+ move()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classChaser.html",tooltip="The Chaser class represents a type of ghost that chases the Pacman."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{Dumb\n|- recentDir\l|+ Dumb()\l+ clone()\l+ respawn()\l+ isReverseDir()\l+ move()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDumb.html",tooltip="The Dumb class represents a dumb ghost."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node4 [label="{Zombie\n|# path\l# target\l# vision\l# dir\l# lastState\l|+ Zombie()\l+ clone()\l+ respawn()\l+ findPath()\l+ checkPrey()\l+ move()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZombie.html",tooltip="The Zombie class represents a zombie ghost in the game."];
+}

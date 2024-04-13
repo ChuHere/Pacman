@@ -1,0 +1,33 @@
+digraph "Game"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Game\n||+ Game()\l+ ~Game()\l+ checkValid()\l+ loadBoard()\l+ initGame()\l+ respawnPac()\l+ respawnFigures()\l+ pacMove()\l+ run()\l+ checkGame()\l+ addLeaderboard()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="The Game class represents the game."];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -conf" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node2 [label="{Config\n||+ Config()\l+ loadConfig()\l+ checkMap()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classConfig.html",tooltip="The Config class represents the game configuration."];
+  Node3 -> Node2 [color="grey25",fontsize="10",style="solid",label=" +mapWidth\n+mapHeight" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 [label="{size_t\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node2 [color="grey25",fontsize="10",style="solid",label=" +powerupDur" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node4 [label="{int\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node2 [color="grey25",fontsize="10",style="solid",label=" +mapDiff" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node5 [label="{string\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -gameBoard" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node6 [label="{Board\n||+ Board()\l+ ~Board()\l+ printBoard()\l+ setPacmanCoords()\l+ checkCollision()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBoard.html",tooltip="The Board class represents the game board."];
+  Node7 -> Node6 [color="grey25",fontsize="10",style="solid",label=" +pacmanCoords" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node7 [label="{Coord\n||}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structCoord.html",tooltip="The Coord struct represents a coordinate in 2D space."];
+  Node4 -> Node7 [color="grey25",fontsize="10",style="solid",label=" +x\n+y" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 -> Node6 [color="grey25",fontsize="10",style="solid",label=" +height\n+width" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node8 -> Node6 [color="grey25",fontsize="10",style="solid",label=" +boardMap" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node8 [label="{vector\< std::vector\l\< BoardTile \> \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node9 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -pac" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node9 [label="{shared_ptr\< Pacman \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node10 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -ghosts" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node10 [label="{vector\< std::shared\l_ptr\< Ghost \> \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node11 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -state" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node11 [label="{GameState\n||+ GameState()\l+ ~GameState()\l+ getScore()\l+ getLives()\l+ setPac()\l+ initDuration()\l+ printState()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGameState.html",tooltip="The GameState class represents the state of the game."];
+  Node4 -> Node11 [color="grey25",fontsize="10",style="solid",label=" +duration\n+score\n+difficulty\n+turnCounter\n+lives\n+pointsAvailable" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node12 -> Node11 [color="grey25",fontsize="10",style="solid",label=" +powerup" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node12 [label="{bool\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node9 -> Node11 [color="grey25",fontsize="10",style="solid",label=" +pac" ,arrowhead="odiamond",fontname="Helvetica"];
+}

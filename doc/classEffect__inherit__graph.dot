@@ -1,0 +1,13 @@
+digraph "Effect"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Effect\n|# taken\l|+ Effect()\l+ ~Effect()\l+ clone()\l+ activate()\l+ printObject()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="The Effect class represents a game effect."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{Cherry\n||+ Cherry()\l+ clone()\l+ activate()\l+ printObject()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCherry.html",tooltip="The Cherry class represents a cherry effect."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{Coin\n||+ Coin()\l+ clone()\l+ activate()\l+ printObject()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCoin.html",tooltip="The Coin class represents a coin effect."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node4 [label="{Teleport\n|# maxHeight\l# maxWidth\l|+ Teleport()\l+ clone()\l+ activate()\l+ printObject()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTeleport.html",tooltip="The Teleport class represents a teleport effect in the game."];
+}
